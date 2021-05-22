@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <title>Tabs</title>
+</head>
+<body>
+<uni-tabs>
+  <uni-layout>
+    <uni-layout-row>
+      <uni-layout-col>
+        <uni-router-link params="tab=1">
+          <uni-route params="tab=1" prop="active">
+            <uni-tab>
+              <uni-translate>Tab 1</uni-translate>
+            </uni-tab>
+          </uni-route>
+        </uni-router-link>
+
+        <uni-router-link params="tab=2">
+          <uni-route params="tab=2" prop="active">
+            <uni-tab>
+              <uni-translate>Tab 2</uni-translate>
+            </uni-tab>
+          </uni-route>
+        </uni-router-link>
+
+        <uni-router-link params="tab=3">
+          <uni-route params="tab=3" prop="active">
+            <uni-tab>
+              <uni-translate>Tab 3</uni-translate>
+            </uni-tab>
+          </uni-route>
+        </uni-router-link>
+      </uni-layout-col>
+    </uni-layout-row>
+  </uni-layout>
+</uni-tabs>
+</body>
+</html>

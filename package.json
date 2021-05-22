@@ -1,0 +1,12 @@
+{
+  "name": "static_template",
+  "version": "0.0.0",
+  "author": "Vitalii Havryliuk",
+  "license": "MIT",
+  "scripts": {
+    "start": "node start.js"
+  },
+  "devDependencies": {
+    "browser-sync": "2.26.14"
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "lang": "en",
+    "flag": "gb",
+    "name": "English",
+    "translation": "assets/json/i18n/faq/en.json"
+  },
+  {
+    "lang": "es",
+    "flag": "es",
+    "name": "Española",
+    "translation": "assets/json/i18n/faq/es.json"
+  },
+  {
+    "lang": "ru",
+    "flag": "ru",
+    "name": "Русский",
+    "translation": "assets/json/i18n/faq/ru.json"
+  }
+]

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"/>
+  <title>Privacy Policy</title>
+
+  <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.ico"/>
+
+  <link href="/assets/css/styles.css" rel="stylesheet" type="text/css"/>
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/icn@latest/dist/icn/icn.esm.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/mat@latest/dist/mat.esm.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/pro@0.1.0/dist/pro.esm.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/udk@0.0.3/dist/udk.esm.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/loc@0.0.5/dist/loc.esm.js"></script>
+
+  <!-- Use to support Internet Explorer -->
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@uiwebkit/icn@latest/dist/icn/icn.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@uiwebkit/mat@latest/dist/mat.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@uiwebkit/pro@latestdist/pro.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@uiwebkit/udk@latest/dist/udk.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@uiwebkit/loc@latest/dist/loc.js"></script>
+</head>
+<body class="app-body">
+<uni-event once listen="uniLoadSuccess" prop="value" stop class="d-flex w-100">
+  <uni-render class="d-flex w-100">
+    <uni-load url="/app.html" response="text"></uni-load>
+  </uni-render>
+</uni-event>
+
+<template uni-render-part>
+  <uni-title value="Privacy Policy"></uni-title>
+
+  <uni-layout>
+    <uni-layout-row>
+      <uni-layout-col breakpoint="md">
+        <uni-translate>
+          <h1>Privacy Policy</h1>
+          <hr>
+
+          <h3 class="pt-3">General Policy</h3>
+
+          <h3 class="pt-3">Cookie Policy</h3>
+
+          <h3 class="pt-3">Changes about Privacy Policy</h3>
+        </uni-translate>
+      </uni-layout-col>
+    </uni-layout-row>
+  </uni-layout>
+</template>
+</body>
+</html>

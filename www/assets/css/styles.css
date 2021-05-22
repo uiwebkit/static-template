@@ -1,0 +1,146 @@
+:root {
+    --mdc-typography-headline6-font-size: 1rem;
+    --uni-color-border: rgba(0, 0, 0, 0.12);
+    --uni-color-default: #000;
+    --uni-color-primary: #3f51b5;
+    --uni-color-success: #018786;
+    --uni-color-accent: #ff4081;
+    --uni-color-warn: #f44336;
+    --uni-color-default-on: #fff;
+    --uni-color-primary-on: #fff;
+    --uni-color-success-on: #fff;
+    --uni-color-accent-on: #fff;
+    --uni-color-warn-on: #fff;
+    --uni-size: 24px;
+    --uni-size-lg: 48px;
+    --uni-size-md: 36px;
+    --uni-size-sm: 24px;
+    --uni-size-xs: 12px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.app-body {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    font-size: 17px;
+}
+
+.app-container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.app-link {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.app-text-link,
+.app-text-link a,
+.app-text-link:hover,
+.app-text-link a:hover {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.app-card-text-container {
+    display: block;
+    padding: 10px;
+}
+
+.app-landing-bg {
+    display: flex;
+    color: #EEEEEE;
+    padding-top: 70px;
+    padding-bottom: 100px;
+    background: -webkit-linear-gradient(90deg, #185079 0%, #0ACDB7 100%);
+    background: linear-gradient(90deg, #185079 0%, #0ACDB7 100%);
+}
+
+.app-landing-logo {
+    width: 35px;
+    height: 35px;
+    margin-bottom: -5px;
+}
+
+.app-landing-title {
+    font-size: 2em;
+    font-weight: 100;
+}
+
+.app-landing-subtitle h3 {
+    margin: 10px 0;
+    font-weight: 100;
+}
+
+.app-landing-button {
+    margin-left: 50px;
+}
+
+.app-aside-close {
+    display: flex;
+    float: right;
+    margin-bottom: -50px;
+}
+
+.app-tabs {
+    width: 100%;
+    display: block;
+    background-color: white;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+}
+
+.app-tabs .mdc-tab {
+    display: inline-flex;
+}
+
+.app-uppercase {
+    text-transform: uppercase;
+}
+
+.app-footer-container {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.app-footer {
+    display: flex;
+    color: #adb5bd;
+    background-color: #343a40;
+    width: 100%;
+}
+
+.app-footer-top {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.app-footer-top a {
+    display: block;
+    color: #adb5bd;
+    text-decoration: none;
+    padding-bottom: 8px;
+}
+
+.app-footer-top a:hover {
+    text-decoration: underline;
+}
+
+.app-footer-bottom {
+    display: flex;
+    color: #ccc;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    background-color: #212529;
+    text-align: center;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <title>Content</title>
+</head>
+<body>
+<uni-event-store-get type="session" path="app.content.link" selector="uni-load-store" prop="url">
+  <uni-load-store multi path="app.templates.content" response="text"></uni-load-store>
+</uni-event-store-get>
+
+<uni-event capture listen="uni.store.memory.app.templates.content" selector="uni-render" prop="value">
+  <uni-store-get path="app.templates.content" selector="uni-render" prop="value">
+    <uni-render template-part class="d-flex w-100"></uni-render>
+  </uni-store-get>
+</uni-event>
+</body>
+</html>

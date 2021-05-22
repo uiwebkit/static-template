@@ -1,0 +1,22 @@
+{
+  "app": {
+    "aside": {
+      "start": {
+        "link": null
+      }
+    },
+    "breadcrumbs": [
+      {
+        "path": "/",
+        "name": "Company",
+        "noParams": "tab"
+      },
+      {
+      },
+      {
+      },
+      {
+      }
+    ]
+  }
+}

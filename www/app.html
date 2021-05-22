@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/">
+  <meta charset="UTF-8"/>
+  <title>App</title>
+</head>
+<body class="app-body">
+<uni-router></uni-router>
+
+<uni-load-store mode="patch" type="session" url="assets/json/initial-session-state.json"></uni-load-store>
+
+<uni-render-load-wrap>
+  <a href="/app/header/index.html"></a>
+</uni-render-load-wrap>
+
+<uni-route-display any path="/category-1/category-2/category-3/">
+  <uni-render-load-wrap>
+    <a href="/app/aside/start/index.html"></a>
+  </uni-render-load-wrap>
+</uni-route-display>
+
+<uni-event-store-get type="session" path="app.aside.start.link" no-equal="null" selector="uni-aside-app-wrap"
+                     prop="adjustStart" class="h-100 w-100">
+  <uni-route any path="/category-1/category-2/category-3/" prop="barStart">
+    <uni-aside-app-wrap header="fixed" class="app-container">
+      <main>
+        <uni-event once listen="uniLoadSuccess" prop="value" stop>
+          <uni-render>
+            <uni-load-wrap response="text">
+              <a href="/app/content/index.html"></a>
+            </uni-load-wrap>
+          </uni-render>
+        </uni-event>
+      </main>
+
+      <uni-render-load-wrap class="app-footer-container">
+        <a href="/app/footer/index.html"></a>
+      </uni-render-load-wrap>
+    </uni-aside-app-wrap>
+  </uni-route>
+</uni-event-store-get>
+
+<uni-event-store-get type="session" path="app.breadcrumbs" prop="activate" value="true">
+  <uni-render-load inactive url="routes.html"></uni-render-load>
+</uni-event-store-get>
+
+<uni-render-load url="/app/templates/routes.html"></uni-render-load>
+
+<!--<uni-analytics code="YOURCODE"></uni-analytics>-->
+</body>
+</html>
