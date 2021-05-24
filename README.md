@@ -1,6 +1,6 @@
 # Uni Static Template
 
-Use Static Template to build cool web UI without coding. This template is used for building only static websites.
+Use Static Template to build cool web UI without coding. This template is used for building static websites only.
 
 ## Getting Started
 
