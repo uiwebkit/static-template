@@ -1,10 +1,10 @@
 {
-  "name": "static_template",
+  "name": "@uiwebkit/static",
   "version": "0.0.0",
   "author": "Vitalii Havryliuk",
   "license": "MIT",
   "scripts": {
-    "start": "node start.js"
+    "serve:dev": "node start.js"
   },
   "devDependencies": {
     "browser-sync": "2.26.14"

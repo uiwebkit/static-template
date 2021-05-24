@@ -7,6 +7,6 @@ browserSync.init({
   watch: true,
   reloadOnRestart: true,
   // single: true,
-  server: ["docs"],
+  server: ["www"],
   logLevel: "info"
 });
