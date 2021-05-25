@@ -30,8 +30,9 @@
 </uni-route>
 
 
-<uni-route path="/app/footer/" prop="activate">
+<uni-route path="/app/footer/" prop="activate" all>
   <uni-render-load inactive url="/app/footer/routes.html"></uni-render-load>
+  <uni-store-set inactive type="session" path="app.aside.start.link" state="null"></uni-store-set>
 </uni-route>
 
 <uni-route no-path="/app/footer/" prop="activate">
