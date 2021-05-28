@@ -14,7 +14,7 @@
   <a href="/app/header/index.html"></a>
 </uni-render-load-wrap>
 
-<uni-route-display any path="/category-1/category-2/category-3/">
+<uni-route-display any path="/category/1/category/2/category/3/">
   <uni-render-load-wrap>
     <a href="/app/aside/start/index.html"></a>
   </uni-render-load-wrap>
@@ -22,7 +22,7 @@
 
 <uni-event-store-get type="session" path="app.aside.start.link" no-equal="null" selector="uni-aside-app-wrap"
                      prop="adjustStart" class="h-100 w-100">
-  <uni-route any path="/category-1/category-2/category-3/" prop="barStart">
+  <uni-route any path="/category/1/category/2/category/3/" prop="barStart">
     <uni-aside-app-wrap header="fixed" class="app-container">
       <main>
         <uni-event once listen="uniLoadSuccess" prop="value" stop>
@@ -42,7 +42,7 @@
 </uni-event-store-get>
 
 <uni-event-store-get type="session" path="app.breadcrumbs[0].path" prop="activate" value="true">
-  <uni-render-load inactive url="/app/routes.html"></uni-render-load>
+  <uni-render-load inactive url="/routes.html"></uni-render-load>
 </uni-event-store-get>
 
 <uni-render-load url="/app/templates/routes.html"></uni-render-load>

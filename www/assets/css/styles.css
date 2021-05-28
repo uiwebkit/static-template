@@ -26,6 +26,10 @@
     height: 100%;
 }
 
+.mdc-list-item__graphic {
+    margin-right: 10px;
+}
+
 .app-body {
     display: flex;
     margin: 0;

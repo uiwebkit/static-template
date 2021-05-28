@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/">
+  <meta charset="UTF-8"/>
+  <title>Routes</title>
+</head>
+<body>
+<uni-route exact path="/category/3/sub-category/5/" prop="activate" all>
+  <uni-store-set inactive type="session" path="app.breadcrumbs[3].name" state="null"></uni-store-set>
+  <uni-store-set inactive type="session" path="app.content.link" state="category/3/sub-category/5/index.html">
+  </uni-store-set>
+</uni-route>
+
+<uni-route path="/category/3/sub-category/5/item/16" prop="activate" all>
+  <uni-store-set inactive type="session" path="app.breadcrumbs[3].name" state="Item 16"></uni-store-set>
+  <uni-store-set inactive type="session" path="app.content.link" state="category/3/sub-category/5/item/16/index.html">
+  </uni-store-set>
+</uni-route>
+
+<uni-route path="/category/3/sub-category/5/item/17" prop="activate" all>
+  <uni-store-set inactive type="session" path="app.breadcrumbs[3].name" state="Item 17"></uni-store-set>
+  <uni-store-set inactive type="session" path="app.content.link" state="category/3/sub-category/5/item/17/index.html">
+  </uni-store-set>
+</uni-route>
+
+<uni-route path="/category/3/sub-category/5/item/18" prop="activate" all>
+  <uni-store-set inactive type="session" path="app.breadcrumbs[3].name" state="Item 18"></uni-store-set>
+  <uni-store-set inactive type="session" path="app.content.link" state="category/3/sub-category/5/item/18/index.html">
+  </uni-store-set>
+</uni-route>
+</body>
+</html>

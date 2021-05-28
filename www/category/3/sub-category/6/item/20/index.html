@@ -4,7 +4,7 @@
   <base href="/">
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"/>
-  <title>Privacy Policy</title>
+  <title>Item 20</title>
 
   <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.ico"/>
 
@@ -31,24 +31,35 @@
 </uni-event>
 
 <template uni-render-part>
-  <uni-title value="Privacy Policy"></uni-title>
+  <uni-title value="Item 20"></uni-title>
+  <uni-scroll-to selector="uni-header"></uni-scroll-to>
+  <uni-store-set path="app.example.selection" state="null"></uni-store-set>
 
-  <uni-layout>
-    <uni-layout-row>
-      <uni-layout-col breakpoint="md">
-        <uni-translate>
-          <h1>Privacy Policy</h1>
-          <hr>
+  <div class="w-100">
+    <uni-render-store path="app.templates.tabs.3" class="app-tabs"></uni-render-store>
 
-          <h3 class="pt-3">General Policy</h3>
+    <section class="d-flex w-100">
+      <uni-layout>
+        <uni-route-display params="tab=1">
+          <uni-render-load-wrap>
+            <a href="/category/3/sub-category/6/item/20/tab-1/"></a>
+          </uni-render-load-wrap>
+        </uni-route-display>
 
-          <h3 class="pt-3">Cookie Policy</h3>
+        <uni-route-display params="tab=2">
+          <uni-render-load-wrap>
+            <a href="/category/3/sub-category/6/item/20/tab-2/"></a>
+          </uni-render-load-wrap>
+        </uni-route-display>
 
-          <h3 class="pt-3">Changes about Privacy Policy</h3>
-        </uni-translate>
-      </uni-layout-col>
-    </uni-layout-row>
-  </uni-layout>
+        <uni-route-display params="tab=3">
+          <uni-render-load-wrap>
+            <a href="/category/3/sub-category/6/item/20/tab-3/"></a>
+          </uni-render-load-wrap>
+        </uni-route-display>
+      </uni-layout>
+    </section>
+  </div>
 </template>
 </body>
 </html>
