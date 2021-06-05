@@ -14,8 +14,8 @@
   <uni-store-set inactive path="cat1.sub2.open" state="false"></uni-store-set>
 </uni-route>
 
-<uni-event-store-get type="session" path="app.aside.start.link" no-equal="null" selector="uni-aside-wrap" prop="active">
-  <uni-aside-wrap bar pro header="fixed" mode="dismissible">
+<uni-event-store-get type="session" path="app.aside.start.link" no-equal="null" selector="uni-aside-wrap" prop="open">
+  <uni-aside-wrap bar list pro header="fixed" mode="dismissible">
     <uni-aside-header-wrap class="d-flex flex-column">
       <uni-render-store path="app.templates.aside.start.close"></uni-render-store>
 
@@ -29,7 +29,7 @@
         <nav>
           <uni-router-link-wrap params="tab=1">
             <a href="/category/1/item/1/" class="app-text-link">
-              <uni-route path="/category/1/item/1/" prop="active">
+              <uni-route path="/category/1/item/1/" prop="selected">
                 <uni-list-item>
                   <uni-list-item-graphic type="two-tone" name="storage"></uni-list-item-graphic>
 
@@ -43,7 +43,7 @@
 
           <uni-router-link-wrap no-params="tab">
             <a href="/category/1/sub-category/1/" class="app-text-link">
-              <uni-route exact path="/category/1/sub-category/1/" prop="active">
+              <uni-route exact path="/category/1/sub-category/1/" prop="selected">
                 <uni-list-item>
                   <uni-list-item-graphic type="two-tone" name="visibility"></uni-list-item-graphic>
 
@@ -68,7 +68,7 @@
           <uni-store-display path="cat1.sub1.open">
             <uni-router-link-wrap params="tab=1">
               <a href="/category/1/sub-category/1/item/2/" class="app-text-link">
-                <uni-route path="/category/1/sub-category/1/item/2/" prop="active">
+                <uni-route path="/category/1/sub-category/1/item/2/" prop="selected">
                   <uni-list-item>
                     <uni-list-item-graphic></uni-list-item-graphic>
 
@@ -83,7 +83,7 @@
 
             <uni-router-link-wrap params="tab=1">
               <a href="/category/1/sub-category/1/item/3/" class="app-text-link">
-                <uni-route path="/category/1/sub-category/1/item/3/" prop="active">
+                <uni-route path="/category/1/sub-category/1/item/3/" prop="selected">
                   <uni-list-item>
                     <uni-list-item-graphic></uni-list-item-graphic>
 
@@ -98,7 +98,7 @@
 
             <uni-router-link-wrap params="tab=1">
               <a href="/category/1/sub-category/1/item/4/" class="app-text-link">
-                <uni-route path="/category/1/sub-category/1/item/4/" prop="active">
+                <uni-route path="/category/1/sub-category/1/item/4/" prop="selected">
                   <uni-list-item>
                     <uni-list-item-graphic></uni-list-item-graphic>
 
@@ -116,7 +116,7 @@
 
           <uni-router-link-wrap no-params="tab">
             <a href="/category/1/sub-category/2/" class="app-text-link">
-              <uni-route exact path="/category/1/sub-category/2/" prop="active">
+              <uni-route exact path="/category/1/sub-category/2/" prop="selected">
                 <uni-list-item>
                   <uni-list-item-graphic type="two-tone" name="router"></uni-list-item-graphic>
 
@@ -141,7 +141,7 @@
           <uni-store-display path="cat1.sub2.open">
             <uni-router-link-wrap params="tab=1">
               <a href="/category/1/sub-category/2/item/5/" class="app-text-link">
-                <uni-route path="/category/1/sub-category/2/item/5/" prop="active">
+                <uni-route path="/category/1/sub-category/2/item/5/" prop="selected">
                   <uni-list-item>
                     <uni-list-item-graphic></uni-list-item-graphic>
 
@@ -156,7 +156,7 @@
 
             <uni-router-link-wrap params="tab=1">
               <a href="/category/1/sub-category/2/item/6/" class="app-text-link">
-                <uni-route path="/category/1/sub-category/2/item/6/" prop="active">
+                <uni-route path="/category/1/sub-category/2/item/6/" prop="selected">
                   <uni-list-item>
                     <uni-list-item-graphic></uni-list-item-graphic>
 
@@ -171,7 +171,7 @@
 
             <uni-router-link-wrap params="tab=1">
               <a href="/category/1/sub-category/2/item/7/" class="app-text-link">
-                <uni-route path="/category/1/sub-category/2/item/7/" prop="active">
+                <uni-route path="/category/1/sub-category/2/item/7/" prop="selected">
                   <uni-list-item>
                     <uni-list-item-graphic></uni-list-item-graphic>
 
