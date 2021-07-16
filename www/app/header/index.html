@@ -9,13 +9,15 @@
 <uni-event-store-get type="session" path="app.breadcrumbs[0]reload" selector="#app-reload" prop="reload">
   <uni-header pro dense mode="fixed">
     <uni-header-section side="start">
-      <uni-router-link-wrap id="app-reload" no-params="tab">
+      <uni-router-link ext id="app-reload" no-params="tab">
         <a href="/">
-          <uni-header-nav-icon wrap>
-            <img src="/assets/img/logo.png" alt="Logo"/>
+          <uni-header-nav-icon only>
+            <uni-icon-button only>
+              <img src="/assets/img/logo.png" alt="Logo"/>
+            </uni-icon-button>
           </uni-header-nav-icon>
         </a>
-      </uni-router-link-wrap>
+      </uni-router-link>
 
       <uni-header-title class="p-0">
         <uni-event-store-get type="session" path="app.breadcrumbs" selector="uni-breadcrumbs" prop="value">
@@ -26,19 +28,19 @@
 
     <uni-header-section side="end">
       <uni-route-display exact path="/">
-        <uni-header-action-item-wrap aria-label="Scroll to Categories">
+        <uni-header-action-item only aria-label="Scroll to Categories">
           <uni-event listen="click" selector="uni-scroll-to" prop="activate">
             <uni-scroll-to inactive selector="#app-categories" offset-y="-58" behavior="smooth">
               <uni-translate class="app-link">Scroll to Categories</uni-translate>
             </uni-scroll-to>
           </uni-event>
-        </uni-header-action-item-wrap>
+        </uni-header-action-item>
       </uni-route-display>
 
       <uni-event-store-get type="session" path="app.loc.languages" selector="uni-lang-menu-shadow" prop="list">
-        <uni-header-action-item-wrap aria-label="Select Language">
+        <uni-header-action-item only aria-label="Select Language">
           <uni-lang-menu-shadow mini round routing></uni-lang-menu-shadow>
-        </uni-header-action-item-wrap>
+        </uni-header-action-item>
       </uni-event-store-get>
     </uni-header-section>
   </uni-header>

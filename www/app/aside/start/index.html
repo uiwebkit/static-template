@@ -6,7 +6,7 @@
   <title>Aside Start</title>
 </head>
 <body>
-<uni-aside-bar-wrap header="dense">
+<uni-sidebar header="dense">
   <uni-event-store-set listen="click" type="session" path="app.aside.start.link" state="category/1/!aside/" prevent>
     <a href="/category/1/aside/" class="app-text-link">
       <uni-icon-button type="two-tone" name="open-with" color="primary"></uni-icon-button>
@@ -24,13 +24,13 @@
       <uni-icon-button type="two-tone" name="build-circle" color="primary"></uni-icon-button>
     </a>
   </uni-event-store-set>
-</uni-aside-bar-wrap>
-
-<uni-load-store url="/app/aside/start/close-button.html" response="text" path="app.templates.aside.start.close">
-</uni-load-store>
+</uni-sidebar>
 
 <uni-event-store-get type="session" path="app.aside.start.link" selector="uni-render-load" prop="url">
   <uni-render-load multi class="d-flex"></uni-render-load>
 </uni-event-store-get>
+
+<uni-load-store url="/app/aside/start/close-button.html" response="text" path="app.templates.aside.start.close">
+</uni-load-store>
 </body>
 </html>
