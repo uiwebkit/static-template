@@ -6,190 +6,149 @@
   <title>Aside Start</title>
 </head>
 <body>
-<uni-route no-path="/category/3/sub-category/5/" prop="activate">
-  <uni-store-set inactive path="cat1.sub1.open" state="false"></uni-store-set>
-</uni-route>
+<uni-router-link ext params="tab=1">
+  <a href="/category/3/item/15/" class="app-text-link">
+    <uni-route path="/category/3/item/15/" prop="selected">
+      <uni-list-item>
+        <uni-list-item-text>
+          <span class="ps-1">&bull;</span>
+          <uni-translate>Item 15</uni-translate>
+        </uni-list-item-text>
+      </uni-list-item>
+    </uni-route>
+  </a>
+</uni-router-link>
 
-<uni-route no-path="/category/3/sub-category/6/" prop="activate">
-  <uni-store-set inactive path="cat1.sub2.open" state="false"></uni-store-set>
-</uni-route>
+<uni-router-link ext no-params="tab">
+  <a href="/category/3/sub-category/5/" class="app-text-link">
+    <uni-route path="/category/3/sub-category/5/" prop="selected">
+      <uni-list-item>
+        <uni-list-item-text>
+          <span class="ps-1">&bull;</span>
+          <uni-translate>Sub Category 5</uni-translate>
+        </uni-list-item-text>
 
-<uni-event-store-get type="session" path="app.aside.start.link" no-equal="null" selector="uni-aside" prop="open">
-  <uni-aside bar list pro header="fixed" mode="dismissible">
-    <uni-aside-header class="d-flex flex-column">
-      <uni-render-store path="app.templates.aside.start.close"></uni-render-store>
-
-      <uni-aside-title>
-        <uni-translate>Category 3</uni-translate>
-      </uni-aside-title>
-    </uni-aside-header>
-
-    <uni-aside-content>
-      <uni-list-wrap pro>
-        <nav>
-          <uni-router-link ext params="tab=1">
-            <a href="/category/3/item/15/" class="app-text-link">
-              <uni-route path="/category/3/item/15/" prop="selected">
-                <uni-list-item>
-                  <uni-list-item-graphic type="two-tone" name="storage"></uni-list-item-graphic>
-
-                  <uni-list-item-text>
-                    <uni-translate>Item 15</uni-translate>
-                  </uni-list-item-text>
-                </uni-list-item>
-              </uni-route>
-            </a>
-          </uni-router-link>
-
-          <uni-router-link ext no-params="tab">
-            <a href="/category/3/sub-category/5/" class="app-text-link">
-              <uni-route exact path="/category/3/sub-category/5/" prop="selected">
-                <uni-list-item>
-                  <uni-list-item-graphic type="two-tone" name="visibility"></uni-list-item-graphic>
-
-                  <uni-list-item-text>
-                    <uni-translate>Sub Category 5</uni-translate>
-                  </uni-list-item-text>
-
-                  <uni-list-item-meta>
-                    <uni-store-display path="cat1.sub1.open" equal="false">
-                      <uni-icon-mat name="arrow-drop-down"></uni-icon-mat>
-                    </uni-store-display>
-
-                    <uni-store-display path="cat1.sub1.open">
-                      <uni-icon-mat name="arrow-drop-up"></uni-icon-mat>
-                    </uni-store-display>
-                  </uni-list-item-meta>
-                </uni-list-item>
-              </uni-route>
-            </a>
-          </uni-router-link>
-
-          <uni-store-display path="cat3.sub1.open">
-            <uni-router-link ext params="tab=1">
-              <a href="/category/3/sub-category/5/item/16/" class="app-text-link">
-                <uni-route path="/category/3/sub-category/5/item/16/" prop="selected">
-                  <uni-list-item>
-                    <uni-list-item-graphic></uni-list-item-graphic>
-
-                    <uni-list-item-text>
-                      <span>&bull;</span>
-                      <uni-translate>Item 16</uni-translate>
-                    </uni-list-item-text>
-                  </uni-list-item>
-                </uni-route>
-              </a>
-            </uni-router-link>
-
-            <uni-router-link ext params="tab=1">
-              <a href="/category/3/sub-category/5/item/17/" class="app-text-link">
-                <uni-route path="/category/3/sub-category/5/item/17/" prop="selected">
-                  <uni-list-item>
-                    <uni-list-item-graphic></uni-list-item-graphic>
-
-                    <uni-list-item-text>
-                      <span>&bull;</span>
-                      <uni-translate>Item 17</uni-translate>
-                    </uni-list-item-text>
-                  </uni-list-item>
-                </uni-route>
-              </a>
-            </uni-router-link>
-
-            <uni-router-link ext params="tab=1">
-              <a href="/category/3/sub-category/5/item/18/" class="app-text-link">
-                <uni-route path="/category/3/sub-category/5/item/18/" prop="selected">
-                  <uni-list-item>
-                    <uni-list-item-graphic></uni-list-item-graphic>
-
-                    <uni-list-item-text>
-                      <span>&bull;</span>
-                      <uni-translate>Item 18</uni-translate>
-                    </uni-list-item-text>
-                  </uni-list-item>
-                </uni-route>
-              </a>
-            </uni-router-link>
-
-            <hr class="mdc-list-divider my-0">
+        <uni-list-item-meta only>
+          <uni-store-display path="cat1.sub1.opened" equal="false">
+            <uni-icon-mat name="arrow-drop-down"></uni-icon-mat>
           </uni-store-display>
 
-          <uni-router-link ext no-params="tab">
-            <a href="/category/3/sub-category/6/" class="app-text-link">
-              <uni-route exact path="/category/3/sub-category/6/" prop="selected">
-                <uni-list-item>
-                  <uni-list-item-graphic type="two-tone" name="router"></uni-list-item-graphic>
-
-                  <uni-list-item-text>
-                    <uni-translate>Sub Category 6</uni-translate>
-                  </uni-list-item-text>
-
-                  <uni-list-item-meta>
-                    <uni-store-display path="cat1.sub2.open" equal="false">
-                      <uni-icon-mat name="arrow-drop-down"></uni-icon-mat>
-                    </uni-store-display>
-
-                    <uni-store-display path="cat1.sub2.open">
-                      <uni-icon-mat name="arrow-drop-up"></uni-icon-mat>
-                    </uni-store-display>
-                  </uni-list-item-meta>
-                </uni-list-item>
-              </uni-route>
-            </a>
-          </uni-router-link>
-
-          <uni-store-display path="cat3.sub2.open">
-            <uni-router-link ext params="tab=1">
-              <a href="/category/3/sub-category/6/item/19/" class="app-text-link">
-                <uni-route path="/category/3/sub-category/6/item/19/" prop="selected">
-                  <uni-list-item>
-                    <uni-list-item-graphic></uni-list-item-graphic>
-
-                    <uni-list-item-text>
-                      <span>&bull;</span>
-                      <uni-translate>Item 19</uni-translate>
-                    </uni-list-item-text>
-                  </uni-list-item>
-                </uni-route>
-              </a>
-            </uni-router-link>
-
-            <uni-router-link ext params="tab=1">
-              <a href="/category/3/sub-category/6/item/20/" class="app-text-link">
-                <uni-route path="/category/3/sub-category/6/item/20/" prop="selected">
-                  <uni-list-item>
-                    <uni-list-item-graphic></uni-list-item-graphic>
-
-                    <uni-list-item-text>
-                      <span>&bull;</span>
-                      <uni-translate>Item 20</uni-translate>
-                    </uni-list-item-text>
-                  </uni-list-item>
-                </uni-route>
-              </a>
-            </uni-router-link>
-
-            <uni-router-link ext params="tab=1">
-              <a href="/category/3/sub-category/6/item/21/" class="app-text-link">
-                <uni-route path="/category/3/sub-category/6/item/21/" prop="selected">
-                  <uni-list-item>
-                    <uni-list-item-graphic></uni-list-item-graphic>
-
-                    <uni-list-item-text>
-                      <span>&bull;</span>
-                      <uni-translate>Item 21</uni-translate>
-                    </uni-list-item-text>
-                  </uni-list-item>
-                </uni-route>
-              </a>
-            </uni-router-link>
-
-            <hr class="mdc-list-divider my-0">
+          <uni-store-display path="cat1.sub1.opened">
+            <uni-icon-mat name="arrow-drop-up"></uni-icon-mat>
           </uni-store-display>
-        </nav>
-      </uni-list-wrap>
-    </uni-aside-content>
-  </uni-aside>
-</uni-event-store-get>
+        </uni-list-item-meta>
+      </uni-list-item>
+    </uni-route>
+  </a>
+</uni-router-link>
+
+<uni-store-display path="cat3.sub1.opened">
+  <uni-router-link ext params="tab=1">
+    <a href="/category/3/sub-category/5/item/16/" class="app-text-link">
+      <uni-route path="/category/3/sub-category/5/item/16/" prop="selected">
+        <uni-list-item>
+          <uni-list-item-text>
+            <span class="ps-2">&bull;&bull;</span>
+            <uni-translate>Item 16</uni-translate>
+          </uni-list-item-text>
+        </uni-list-item>
+      </uni-route>
+    </a>
+  </uni-router-link>
+
+  <uni-router-link ext params="tab=1">
+    <a href="/category/3/sub-category/5/item/17/" class="app-text-link">
+      <uni-route path="/category/3/sub-category/5/item/17/" prop="selected">
+        <uni-list-item>
+          <uni-list-item-text>
+            <span class="ps-2">&bull;&bull;</span>
+            <uni-translate>Item 17</uni-translate>
+          </uni-list-item-text>
+        </uni-list-item>
+      </uni-route>
+    </a>
+  </uni-router-link>
+
+  <uni-router-link ext params="tab=1">
+    <a href="/category/3/sub-category/5/item/18/" class="app-text-link">
+      <uni-route path="/category/3/sub-category/5/item/18/" prop="selected">
+        <uni-list-item>
+          <uni-list-item-text>
+            <span class="ps-2">&bull;&bull;</span>
+            <uni-translate>Item 18</uni-translate>
+          </uni-list-item-text>
+        </uni-list-item>
+      </uni-route>
+    </a>
+  </uni-router-link>
+
+  <hr class="mdc-deprecated-list-divider my-0">
+</uni-store-display>
+
+<uni-router-link ext no-params="tab">
+  <a href="/category/3/sub-category/6/" class="app-text-link">
+    <uni-route path="/category/3/sub-category/6/" prop="selected">
+      <uni-list-item>
+        <uni-list-item-text>
+          <span class="ps-1">&bull;</span>
+          <uni-translate>Sub Category 6</uni-translate>
+        </uni-list-item-text>
+
+        <uni-list-item-meta only>
+          <uni-store-display path="cat1.sub2.opened" equal="false">
+            <uni-icon-mat name="arrow-drop-down"></uni-icon-mat>
+          </uni-store-display>
+
+          <uni-store-display path="cat1.sub2.opened">
+            <uni-icon-mat name="arrow-drop-up"></uni-icon-mat>
+          </uni-store-display>
+        </uni-list-item-meta>
+      </uni-list-item>
+    </uni-route>
+  </a>
+</uni-router-link>
+
+<uni-store-display path="cat3.sub2.opened">
+  <uni-router-link ext params="tab=1">
+    <a href="/category/3/sub-category/6/item/19/" class="app-text-link">
+      <uni-route path="/category/3/sub-category/6/item/19/" prop="selected">
+        <uni-list-item>
+          <uni-list-item-text>
+            <span class="ps-2">&bull;&bull;</span>
+            <uni-translate>Item 19</uni-translate>
+          </uni-list-item-text>
+        </uni-list-item>
+      </uni-route>
+    </a>
+  </uni-router-link>
+
+  <uni-router-link ext params="tab=1">
+    <a href="/category/3/sub-category/6/item/20/" class="app-text-link">
+      <uni-route path="/category/3/sub-category/6/item/20/" prop="selected">
+        <uni-list-item>
+          <uni-list-item-text>
+            <span class="ps-2">&bull;&bull;</span>
+            <uni-translate>Item 20</uni-translate>
+          </uni-list-item-text>
+        </uni-list-item>
+      </uni-route>
+    </a>
+  </uni-router-link>
+
+  <uni-router-link ext params="tab=1">
+    <a href="/category/3/sub-category/6/item/21/" class="app-text-link">
+      <uni-route path="/category/3/sub-category/6/item/21/" prop="selected">
+        <uni-list-item>
+          <uni-list-item-text>
+            <span class="ps-2">&bull;&bull;</span>
+            <uni-translate>Item 21</uni-translate>
+          </uni-list-item-text>
+        </uni-list-item>
+      </uni-route>
+    </a>
+  </uni-router-link>
+</uni-store-display>
+
+<hr class="mdc-deprecated-list-divider my-0">
 </body>
 </html>

@@ -18,6 +18,10 @@
     --uni-size-xs: 12px;
 }
 
+.mdc-deprecated-list-item__graphic {
+    margin-right: 10px;
+}
+
 .w-100 {
     width: 100%;
 }

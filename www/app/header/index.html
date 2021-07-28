@@ -6,44 +6,76 @@
   <title>Header</title>
 </head>
 <body>
-<uni-event-store-get type="session" path="app.breadcrumbs[0]reload" selector="#app-reload" prop="reload">
-  <uni-header pro dense mode="fixed">
-    <uni-header-section side="start">
-      <uni-router-link ext id="app-reload" no-params="tab">
-        <a href="/">
-          <uni-header-nav-icon only>
-            <uni-icon-button only>
-              <img src="/assets/img/logo.png" alt="Logo"/>
-            </uni-icon-button>
-          </uni-header-nav-icon>
-        </a>
-      </uni-router-link>
+<uni-event-store-get type="session" path="app.header.dense" selector="uni-header" prop="dense">
+  <uni-event-store-get type="session" path="app.header.mode" selector="uni-header" prop="mode">
+    <uni-event-store-get path="app.aside.start.adjust" selector="uni-adjust" prop="asideEnd">
+      <uni-header pro>
+        <uni-header-section side="start">
+          <uni-store-display path="app.aside.start.adjust" equal="false">
+            <uni-route-display any path="/category/1/category/2/category/3/">
+              <uni-event-store-set listen="click" type="session" path="app.aside.start.opened" state="true" prevent>
+                <uni-header-nav-icon>menu</uni-header-nav-icon>
+              </uni-event-store-set>
+            </uni-route-display>
 
-      <uni-header-title class="p-0">
-        <uni-event-store-get type="session" path="app.breadcrumbs" selector="uni-breadcrumbs" prop="value">
-          <uni-breadcrumbs class="app-text-link"></uni-breadcrumbs>
-        </uni-event-store-get>
-      </uni-header-title>
-    </uni-header-section>
+            <uni-route-display any no-path="/category/1/category/2/category/3/">
+              <uni-router-link ext no-params="tab">
+                <a href="/" class="d-inline-flex">
+                  <uni-header-nav-icon only>
+                    <uni-icon-button only>
+                      <img src="assets/img/logo.png" alt="Company Logo"/>
+                    </uni-icon-button>
+                  </uni-header-nav-icon>
+                </a>
+              </uni-router-link>
+            </uni-route-display>
+          </uni-store-display>
 
-    <uni-header-section side="end">
-      <uni-route-display exact path="/">
-        <uni-header-action-item only aria-label="Scroll to Categories">
-          <uni-event listen="click" selector="uni-scroll-to" prop="activate">
-            <uni-scroll-to inactive selector="#app-categories" offset-y="-58" behavior="smooth">
-              <uni-translate class="app-link">Scroll to Categories</uni-translate>
-            </uni-scroll-to>
-          </uni-event>
-        </uni-header-action-item>
-      </uni-route-display>
+          <uni-header-title class="ps-1">
+            <uni-route-display exact path="/">Company</uni-route-display>
 
-      <uni-event-store-get type="session" path="app.loc.languages" selector="uni-lang-menu-shadow" prop="list">
-        <uni-header-action-item only aria-label="Select Language">
-          <uni-lang-menu-shadow mini round routing></uni-lang-menu-shadow>
-        </uni-header-action-item>
-      </uni-event-store-get>
-    </uni-header-section>
-  </uni-header>
+            <uni-route-display exact no-path="/">
+              <uni-store-display path="app.aside.start.adjust" equal="false">
+                <uni-router-link ext no-params="tab" class="d-inline-flex">
+                  <a href="/" class="d-inline-flex app-text-link" style="text-decoration: underline">
+                    Company
+                  </a>
+                </uni-router-link>
+              </uni-store-display>
+            </uni-route-display>
+
+            <uni-route-display exact no-path="/">
+              <span>/</span>
+            </uni-route-display>
+
+            <uni-event-store-get path="app.breadcrumbs" selector="uni-breadcrumbs" prop="value" class="d-inline-flex">
+              <uni-breadcrumbs class="app-text-link"></uni-breadcrumbs>
+            </uni-event-store-get>
+          </uni-header-title>
+        </uni-header-section>
+
+        <uni-adjust class="mdc-top-app-bar__section p-0">
+          <uni-header-section side="end">
+            <uni-route-display exact path="/">
+              <uni-header-action-item only aria-label="Scroll to Categories">
+                <uni-event listen="click" selector="uni-scroll-to" prop="activate">
+                  <uni-scroll-to inactive selector="#app-categories" offset-y="-58" behavior="smooth">
+                    <uni-translate class="app-link">Scroll to Categories</uni-translate>
+                  </uni-scroll-to>
+                </uni-event>
+              </uni-header-action-item>
+            </uni-route-display>
+
+            <uni-event-store-get type="session" path="app.loc.languages" selector="uni-lang-menu-shadow" prop="list">
+              <uni-header-action-item only aria-label="Select Language">
+                <uni-lang-menu-shadow mini round routing></uni-lang-menu-shadow>
+              </uni-header-action-item>
+            </uni-event-store-get>
+          </uni-header-section>
+        </uni-adjust>
+      </uni-header>
+    </uni-event-store-get>
+  </uni-event-store-get>
 </uni-event-store-get>
 </body>
 </html>

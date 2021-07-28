@@ -7,28 +7,30 @@
 </head>
 <body>
 <uni-route path="/app/footer/" prop="activate" all>
-  <uni-store-set inactive type="session" path="app.breadcrumbs[2].name" state="null"></uni-store-set>
-  <uni-store-set inactive type="session" path="app.breadcrumbs[3].name" state="null"></uni-store-set>
+  <uni-store-set inactive path="app.breadcrumbs[0].path" state="null"></uni-store-set>
+  <uni-store-set inactive path="app.breadcrumbs[1].name" state="null"></uni-store-set>
+  <uni-store-set inactive path="app.breadcrumbs[1].path" state="null"></uni-store-set>
+  <uni-store-set inactive path="app.breadcrumbs[2].name" state="null"></uni-store-set>
+  <uni-store-set inactive path="app.breadcrumbs[2].path" state="null"></uni-store-set>
 </uni-route>
 
 <uni-route exact path="/app/footer/faq/" prop="activate" all>
-  <uni-store-set inactive type="session" path="app.content.link" state="/app/footer/faq/index.html"></uni-store-set>
-  <uni-store-set inactive type="session" path="app.breadcrumbs[1].name" state="Common Questions"></uni-store-set>
-
+  <uni-store-set inactive path="app.breadcrumbs[0].name" state="Common Questions"></uni-store-set>
+  <uni-store-set inactive path="app.content.link" state="/app/footer/faq/index.html"></uni-store-set>
   <uni-store-set inactive type="session" path="app.loc.languages" state="assets/json/i18n/faq/langs.json">
   </uni-store-set>
 </uni-route>
 
 <uni-route exact path="/app/footer/terms/" prop="activate" all>
+  <uni-store-set inactive path="app.breadcrumbs[0].name" state="Terms of Use"></uni-store-set>
   <uni-store-set inactive type="session" path="app.content.link" state="/app/footer/terms/index.html"></uni-store-set>
-  <uni-store-set inactive type="session" path="app.breadcrumbs[1].name" state="Terms of Use"></uni-store-set>
   <uni-store-set inactive type="session" path="app.loc.languages" state="assets/json/i18n/terms/langs.json">
   </uni-store-set>
 </uni-route>
 
 <uni-route exact path="/app/footer/privacy/" prop="activate" all>
+  <uni-store-set inactive path="app.breadcrumbs[0].name" state="Privacy Policy"></uni-store-set>
   <uni-store-set inactive type="session" path="app.content.link" state="/app/footer/privacy/index.html"></uni-store-set>
-  <uni-store-set inactive type="session" path="app.breadcrumbs[1].name" state="Privacy Policy"></uni-store-set>
   <uni-store-set inactive type="session" path="app.loc.languages" state="assets/json/i18n/privacy/langs.json">
   </uni-store-set>
 </uni-route>

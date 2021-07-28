@@ -2,27 +2,14 @@
   "app": {
     "aside": {
       "start": {
-        "link": null
+        "mode": "dismissible",
+        "opened": true
       }
     },
-    "breadcrumbs": [
-      {
-        "path": "/",
-        "name": "Company",
-        "noParams": "tab"
-      },
-      {
-        "name": null,
-        "noParams": "tab"
-      },
-      {
-        "name": null,
-        "noParams": "tab"
-      },
-      {
-        "name": null,
-        "noParams": "tab"
-      }
-    ]
+    "header": {
+      "dense": true,
+      "prominent": false,
+      "mode": "fixed"
+    }
   }
 }

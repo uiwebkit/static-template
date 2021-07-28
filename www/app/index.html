@@ -8,45 +8,46 @@
 <body class="app-body">
 <uni-router shadow></uni-router>
 
+<uni-load-store mode="patch" url="assets/json/initial-state.json"></uni-load-store>
 <uni-load-store mode="patch" type="session" url="assets/json/initial-session-state.json"></uni-load-store>
 
-<uni-header-adjust dense>
-  <uni-route-display any path="/category/1/category/2/category/3/">
-    <uni-render-load ext>
-      <a href="/app/aside/start/index.html"></a>
-    </uni-render-load>
-  </uni-route-display>
-</uni-header-adjust>
-
 <uni-render-load ext>
-  <a href="/app/header/index.html"></a>
+  <a href="app/aside/start/adjust.html"></a>
 </uni-render-load>
 
-<uni-aside-app class="w-100">
-  <uni-event-store-get type="session" path="app.aside.start.link" no-equal="null" selector="uni-adjust"
-                       prop="asideStart">
-    <uni-route any path="/category/1/category/2/category/3/" selector="uni-adjust" prop="sidebarStart">
-      <uni-adjust class="app-container">
-        <uni-header-adjust dense class="h-100">
-          <main class="app-container">
-            <uni-render-load ext>
-              <a href="/app/content/index.html"></a>
-            </uni-render-load>
+<uni-route exact path="/" prop="inactive">
+  <uni-render inactive>
+    <template>
+      <uni-render-load ext>
+        <a href="app/aside/start/index.html"></a>
+      </uni-render-load>
+    </template>
+  </uni-render>
+</uni-route>
 
-            <uni-render-load ext class="app-footer-container">
-              <a href="/app/footer/index.html"></a>
-            </uni-render-load>
-          </main>
-        </uni-header-adjust>
-      </uni-adjust>
-    </uni-route>
+<uni-aside-app class="w-100">
+  <uni-event-store-get path="app.aside.start.adjust" prop="asideStart">
+    <uni-adjust class="app-container">
+      <uni-render-load ext>
+        <a href="/app/header/index.html"></a>
+      </uni-render-load>
+
+      <uni-header-adjust dense class="h-100">
+        <main class="app-container">
+          <uni-render-load ext>
+            <a href="/app/content/index.html"></a>
+          </uni-render-load>
+
+          <uni-render-load ext class="app-footer-container">
+            <a href="/app/footer/index.html"></a>
+          </uni-render-load>
+        </main>
+      </uni-header-adjust>
+    </uni-adjust>
   </uni-event-store-get>
 </uni-aside-app>
 
-<uni-event-store-get type="session" path="app.breadcrumbs[0].path" prop="activate" value="true">
-  <uni-render-load inactive url="/routes.html"></uni-render-load>
-</uni-event-store-get>
-
+<uni-render-load url="app/routes.html"></uni-render-load>
 <uni-render-load url="/app/templates/routes.html"></uni-render-load>
 
 <!--<uni-analytics code="YOURCODE"></uni-analytics>-->

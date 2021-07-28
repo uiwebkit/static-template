@@ -6,16 +6,9 @@
   <title>Close Button</title>
 </head>
 <body>
-<uni-event-store-set
-  listen="click"
-  type="session"
-  path="app.aside.start.link"
-  state="null"
-  class="app-aside-close"
->
-  <uni-theme-wrap filter="accent">
-    <uni-icon-button mini name="close"></uni-icon-button>
-  </uni-theme-wrap>
+<uni-event-store-set listen="click" type="session" path="app.aside.start.opened" state="false" prevent
+                     class="app-aside-close">
+  <uni-icon-button mini color="accent" name="close"></uni-icon-button>
 </uni-event-store-set>
 </body>
 </html>

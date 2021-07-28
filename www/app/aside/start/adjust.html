@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<uni-route exact path="/" prop="activate">
+  <uni-store-set inactive path="app.aside.start.adjust" state="false"></uni-store-set>
+</uni-route>
+
+<uni-event-store-get type="session" path="app.aside.start.mode" equal="modal" prop="activate">
+  <uni-store-set inactive path="app.aside.start.adjust" state="false"></uni-store-set>
+</uni-event-store-get>
+
+<uni-route any path="/category/1/category/2/category/3/" prop="activate">
+  <uni-store-get inactive type="session" path="app.aside.start.mode" no-equal="modal" prop="activate">
+    <uni-store-get inactive type="session" path="app.aside.start.opened" equal="true" prop="activate">
+      <uni-store-set inactive path="app.aside.start.adjust" state="true"></uni-store-set>
+    </uni-store-get>
+  </uni-store-get>
+</uni-route>
+
+<uni-route exact path="/" prop="inactive">
+  <uni-event-store-get inactive type="session" path="app.aside.start.mode" equal="modal" prop="inactive">
+    <uni-event-store-get inactive type="session" path="app.aside.start.opened" prop="state">
+      <uni-store-set path="app.aside.start.adjust"></uni-store-set>
+    </uni-event-store-get>
+  </uni-event-store-get>
+</uni-route>
+</body>
+</html>

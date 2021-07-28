@@ -7,38 +7,51 @@
 </head>
 <body>
 <uni-route path="/category/1/" prop="activate" all>
-  <uni-store-set inactive type="session" path="app.breadcrumbs[1].name" state="Category 1"></uni-store-set>
-  <uni-store-set inactive type="session" path="app.breadcrumbs[1].path" state="/category/1/"></uni-store-set>
+  <uni-store-set inactive path="app.breadcrumbs[0].name" state="Category 1"></uni-store-set>
+  <uni-store-set inactive path="app.breadcrumbs[0].path" state="/category/1/"></uni-store-set>
 </uni-route>
 
 <uni-route exact path="/category/1/" prop="activate" all>
-  <uni-store-set inactive type="session" path="app.breadcrumbs[2].name" state="null"></uni-store-set>
-  <uni-store-set inactive type="session" path="app.breadcrumbs[3].name" state="null"></uni-store-set>
+  <uni-store-set inactive path="app.breadcrumbs[1].name" state="null"></uni-store-set>
+  <uni-store-set inactive path="app.breadcrumbs[1].path" state="null"></uni-store-set>
+  <uni-store-set inactive path="app.breadcrumbs[2].name" state="null"></uni-store-set>
+  <uni-store-set inactive path="app.breadcrumbs[2].path" state="null"></uni-store-set>
+
   <uni-store-set inactive type="session" path="app.content.link" state="category/1/index.html"></uni-store-set>
 </uni-route>
 
 <uni-route path="/category/1/item/1/" prop="activate" all>
-  <uni-store-set inactive type="session" path="app.breadcrumbs[2].name" state="Item 1"></uni-store-set>
-  <uni-store-set inactive type="session" path="app.breadcrumbs[3].name" state="null"></uni-store-set>
+  <uni-store-set inactive path="app.breadcrumbs[1].name" state="Item 1"></uni-store-set>
+  <uni-store-set inactive path="app.breadcrumbs[2].name" state="null"></uni-store-set>
+  <uni-store-set inactive path="app.breadcrumbs[2].path" state="null"></uni-store-set>
+
   <uni-store-set inactive type="session" path="app.content.link" state="category/1/item/1/index.html"></uni-store-set>
 </uni-route>
 
 <uni-route path="/category/1/sub-category/1/" prop="activate" all>
-  <uni-store-set inactive path="cat1.sub1.open" state="true"></uni-store-set>
-  <uni-store-set inactive type="session" path="app.breadcrumbs[2].name" state="Sub Category 1"></uni-store-set>
-  <uni-store-set inactive type="session" path="app.breadcrumbs[2].path" state="category/1/sub-category/1/">
+  <uni-store-set inactive path="cat1.sub1.opened" state="true"></uni-store-set>
+  <uni-store-set inactive path="app.breadcrumbs[1].name" state="Sub Category 1"></uni-store-set>
+  <uni-store-set inactive path="app.breadcrumbs[1].path" state="category/1/sub-category/1/">
   </uni-store-set>
 
   <uni-render-load inactive url="/category/1/sub-category/1/routes.html"></uni-render-load>
 </uni-route>
 
 <uni-route path="/category/1/sub-category/2/" prop="activate" all>
-  <uni-store-set inactive path="cat1.sub2.open" state="true"></uni-store-set>
-  <uni-store-set inactive type="session" path="app.breadcrumbs[2].name" state="Sub Category 2"></uni-store-set>
-  <uni-store-set inactive type="session" path="app.breadcrumbs[2].path" state="category/1/sub-category/2/">
+  <uni-store-set inactive path="cat1.sub2.opened" state="true"></uni-store-set>
+  <uni-store-set inactive path="app.breadcrumbs[1].name" state="Sub Category 2"></uni-store-set>
+  <uni-store-set inactive path="app.breadcrumbs[1].path" state="category/1/sub-category/2/">
   </uni-store-set>
 
   <uni-render-load inactive url="/category/1/sub-category/2/routes.html"></uni-render-load>
+</uni-route>
+
+<uni-route no-path="/category/1/sub-category/1/" prop="activate">
+  <uni-store-set inactive path="cat1.sub1.opened" state="false"></uni-store-set>
+</uni-route>
+
+<uni-route no-path="/category/1/sub-category/2/" prop="activate">
+  <uni-store-set inactive path="cat1.sub2.opened" state="false"></uni-store-set>
 </uni-route>
 </body>
 </html>

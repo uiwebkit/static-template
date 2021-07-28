@@ -6,28 +6,149 @@
   <title>Aside Start</title>
 </head>
 <body>
-<uni-sidebar header="dense">
-  <uni-event-store-set listen="click" type="session" path="app.aside.start.link" state="category/1/!aside/" prevent>
-    <a href="/category/1/aside/" class="app-text-link">
-      <uni-icon-button type="two-tone" name="open-with" color="primary"></uni-icon-button>
-    </a>
-  </uni-event-store-set>
+<uni-event-store-get type="session" path="app.aside.start.mode" no-equal="modal" selector="uni-event-store-set"
+                     prop="inactive">
+  <uni-event-store-set inactive listen="click" type="session" path="app.aside.start.opened" state="false">
+    <uni-event-store-get type="session" path="app.aside.start.opened" no-equal="false" selector="uni-aside" prop="open">
+      <uni-event-store-get type="session" path="app.aside.start.mode" selector="uni-aside" prop="mode">
+        <uni-event-store-get type="session" path="app.aside.start.mode" no-equal="modal" selector="uni-aside-scrim"
+                             prop="inactive">
+          <uni-aside pro>
+            <uni-aside-header class="d-flex flex-column p-0">
+              <uni-render-store path="app.templates.aside.start.close"></uni-render-store>
 
-  <uni-event-store-set listen="click" type="session" path="app.aside.start.link" state="category/2/!aside/" prevent>
-    <a href="/category/2/aside/" class="app-text-link">
-      <uni-icon-button type="two-tone" name="album" color="primary"></uni-icon-button>
-    </a>
-  </uni-event-store-set>
+              <uni-aside-title>
+                <uni-router-link ext no-params="tab">
+                  <a href="/" class="d-inline-flex">
+                    <uni-icon-button only>
+                      <img src="assets/img/logo.png" alt="Company Logo"/>
+                    </uni-icon-button>
 
-  <uni-event-store-set listen="click" type="session" path="app.aside.start.link" state="category/3/!aside/" prevent>
-    <a href="/category/3/aside/" class="app-text-link">
-      <uni-icon-button type="two-tone" name="build-circle" color="primary"></uni-icon-button>
-    </a>
-  </uni-event-store-set>
-</uni-sidebar>
+                    <span style="padding-top: 14px">Company</span>
+                  </a>
+                </uni-router-link>
+              </uni-aside-title>
+            </uni-aside-header>
 
-<uni-event-store-get type="session" path="app.aside.start.link" selector="uni-render-load" prop="url">
-  <uni-render-load multi class="d-flex"></uni-render-load>
+            <uni-aside-content>
+              <uni-event listen="click" stop>
+                <uni-list-wrap pro>
+                  <nav>
+                    <uni-router-link ext no-params="tab">
+                      <a href="/category/1/" class="app-text-link">
+                        <uni-route path="/category/1/" prop="selected">
+                          <uni-list-item>
+                            <uni-list-item-graphic type="two-tone" name="open-with" color="primary">
+                            </uni-list-item-graphic>
+
+                            <uni-list-item-text>
+                              <uni-translate>Category 1</uni-translate>
+                            </uni-list-item-text>
+
+                            <uni-list-item-meta only>
+                              <uni-store-display path="cat1.opened" equal="false">
+                                <uni-icon-mat name="arrow-drop-down"></uni-icon-mat>
+                              </uni-store-display>
+
+                              <uni-store-display path="cat1.opened">
+                                <uni-icon-mat name="arrow-drop-up"></uni-icon-mat>
+                              </uni-store-display>
+                            </uni-list-item-meta>
+                          </uni-list-item>
+                        </uni-route>
+                      </a>
+                    </uni-router-link>
+
+                    <uni-event-store-get path="cat1.opened" equal="false" prop="inactive">
+                      <uni-render inactive>
+                        <template>
+                          <uni-render-load ext>
+                            <a href="/category/1/!aside/"></a>
+                          </uni-render-load>
+                        </template>
+                      </uni-render>
+                    </uni-event-store-get>
+
+                    <uni-router-link ext no-params="tab">
+                      <a href="/category/2/" class="app-text-link">
+                        <uni-route path="/category/2/" prop="selected">
+                          <uni-list-item>
+                            <uni-list-item-graphic type="two-tone" name="album" color="primary">
+                            </uni-list-item-graphic>
+
+                            <uni-list-item-text>
+                              <uni-translate>Category 2</uni-translate>
+                            </uni-list-item-text>
+
+                            <uni-list-item-meta only>
+                              <uni-store-display path="cat2.opened" equal="false">
+                                <uni-icon-mat name="arrow-drop-down"></uni-icon-mat>
+                              </uni-store-display>
+
+                              <uni-store-display path="cat2.opened">
+                                <uni-icon-mat name="arrow-drop-up"></uni-icon-mat>
+                              </uni-store-display>
+                            </uni-list-item-meta>
+                          </uni-list-item>
+                        </uni-route>
+                      </a>
+                    </uni-router-link>
+
+                    <uni-event-store-get path="cat2.opened" equal="false" prop="inactive">
+                      <uni-render inactive>
+                        <template>
+                          <uni-render-load ext>
+                            <a href="/category/2/!aside/"></a>
+                          </uni-render-load>
+                        </template>
+                      </uni-render>
+                    </uni-event-store-get>
+
+                    <uni-router-link ext no-params="tab">
+                      <a href="/category/3/" class="app-text-link">
+                        <uni-route path="/category/3/" prop="selected">
+                          <uni-list-item>
+                            <uni-list-item-graphic type="two-tone" name="widgets" color="primary">
+                            </uni-list-item-graphic>
+
+                            <uni-list-item-text>
+                              <uni-translate>Category 3</uni-translate>
+                            </uni-list-item-text>
+
+                            <uni-list-item-meta only>
+                              <uni-store-display path="cat3.opened" equal="false">
+                                <uni-icon-mat name="arrow-drop-down"></uni-icon-mat>
+                              </uni-store-display>
+
+                              <uni-store-display path="cat3.opened">
+                                <uni-icon-mat name="arrow-drop-up"></uni-icon-mat>
+                              </uni-store-display>
+                            </uni-list-item-meta>
+                          </uni-list-item>
+                        </uni-route>
+                      </a>
+                    </uni-router-link>
+
+                    <uni-event-store-get path="cat3.opened" equal="false" prop="inactive">
+                      <uni-render inactive>
+                        <template>
+                          <uni-render-load ext>
+                            <a href="/category/3/!aside/"></a>
+                          </uni-render-load>
+                        </template>
+                      </uni-render>
+                    </uni-event-store-get>
+                  </nav>
+                </uni-list-wrap>
+              </uni-event>
+            </uni-aside-content>
+          </uni-aside>
+
+          <uni-aside-scrim></uni-aside-scrim>
+        </uni-event-store-get>
+      </uni-event-store-get>
+    </uni-event-store-get>
+  </uni-event-store-set>
 </uni-event-store-get>
 
 <uni-load-store url="/app/aside/start/close-button.html" response="text" path="app.templates.aside.start.close">
