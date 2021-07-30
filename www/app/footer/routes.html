@@ -16,7 +16,7 @@
 
 <uni-route exact path="/app/footer/faq/" prop="activate" all>
   <uni-store-set inactive path="app.breadcrumbs[0].name" state="Common Questions"></uni-store-set>
-  <uni-store-set inactive path="app.content.link" state="/app/footer/faq/index.html"></uni-store-set>
+  <uni-store-set inactive type="session" path="app.content.link" state="/app/footer/faq/index.html"></uni-store-set>
   <uni-store-set inactive type="session" path="app.loc.languages" state="assets/json/i18n/faq/langs.json">
   </uni-store-set>
 </uni-route>

@@ -37,7 +37,7 @@
             <uni-route-display exact no-path="/">
               <uni-store-display path="app.aside.start.adjust" equal="false">
                 <uni-router-link ext no-params="tab" class="d-inline-flex">
-                  <a href="/" class="d-inline-flex app-text-link" style="text-decoration: underline">
+                  <a href="/" class="d-inline-flex" style="color: currentColor;">
                     Company
                   </a>
                 </uni-router-link>
@@ -60,11 +60,24 @@
               <uni-header-action-item only aria-label="Scroll to Categories">
                 <uni-event listen="click" selector="uni-scroll-to" prop="activate">
                   <uni-scroll-to inactive selector="#app-categories" offset-y="-58" behavior="smooth">
-                    <uni-translate class="app-link">Scroll to Categories</uni-translate>
+                    <uni-translate class="app-link">Categories</uni-translate>
                   </uni-scroll-to>
                 </uni-event>
               </uni-header-action-item>
             </uni-route-display>
+
+            <uni-action-download url="https://github.com/uiwebkit/static/archive/refs/heads/master.zip"
+                                 class="app-text-link">
+              <uni-icon-button only>
+                <uni-icon-fa name="download"></uni-icon-fa>
+              </uni-icon-button>
+            </uni-action-download>
+
+            <a href="https://github.com/uiwebkit/static/" target="_blank" class="app-text-link">
+              <uni-icon-button only>
+                <uni-icon-fa type="brands" name="github"></uni-icon-fa>
+              </uni-icon-button>
+            </a>
 
             <uni-event-store-get type="session" path="app.loc.languages" selector="uni-lang-menu-shadow" prop="list">
               <uni-header-action-item only aria-label="Select Language">
