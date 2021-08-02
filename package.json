@@ -1,7 +1,7 @@
 {
   "name": "@uiwebkit/static",
   "version": "0.0.0",
-  "author": "Vitalii Havryliuk",
+  "author": "Vitali Havryliuk",
   "license": "MIT",
   "scripts": {
     "serve:dev": "node start.js"

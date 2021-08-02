@@ -1,0 +1,26 @@
+*~
+*.sw[mnpcod]
+*.log
+*.lock
+*-lock.json
+*.tmp
+*.tmp.*
+log.txt
+*.sublime-project
+*.sublime-workspace
+
+.idea/
+.vscode/
+.sass-cache/
+.versions/
+node_modules/
+build/
+$RECYCLE.BIN/
+
+.DS_Store
+Thumbs.db
+UserInterfaceState.xcuserstate
+.env
+
+# Local Netlify folder
+.netlify
