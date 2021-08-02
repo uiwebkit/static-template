@@ -79,6 +79,14 @@
               </uni-icon-button>
             </a>
 
+            <uni-event-store-set listen="click" path="app.dialog.config.open" state="true">
+              <uni-header-action-item only aria-label="Settings">
+                <uni-icon-button only>
+                  <uni-icon-mat name="settings" color="white"></uni-icon-mat>
+                </uni-icon-button>
+              </uni-header-action-item>
+            </uni-event-store-set>
+
             <uni-event-store-get type="session" path="app.loc.languages" selector="uni-lang-menu-shadow" prop="list">
               <uni-header-action-item only aria-label="Select Language">
                 <uni-lang-menu-shadow mini round routing></uni-lang-menu-shadow>
@@ -90,5 +98,19 @@
     </uni-event-store-get>
   </uni-event-store-get>
 </uni-event-store-get>
+
+<uni-event-store-get path="app.dialog.config.open" equal="false" selector="uni-router-link" prop="activate">
+  <uni-router-link reload></uni-router-link>
+</uni-event-store-get>
+
+<uni-event-store-set listen="uniDialogClosing" path="app.dialog.config.open" state="false">
+  <uni-event-store-get path="app.dialog.config.open" selector="uni-dialog" prop="open">
+    <uni-dialog>
+      <uni-dialog-content>
+        <uni-render-load template-part url="app/content/config.html"></uni-render-load>
+      </uni-dialog-content>
+    </uni-dialog>
+  </uni-event-store-get>
+</uni-event-store-set>
 </body>
 </html>

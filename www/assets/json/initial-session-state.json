@@ -9,6 +9,7 @@
     "header": {
       "dense": true,
       "prominent": false,
+      "checked": true,
       "mode": "fixed"
     }
   }

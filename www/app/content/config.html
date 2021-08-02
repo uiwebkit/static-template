@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<uni-event-store-set listen="click" path="app.dialog.config.open" state="false" class="app-aside-close">
+  <uni-icon-button mini color="accent" name="close"></uni-icon-button>
+</uni-event-store-set>
+
+
+<uni-event-store-get type="session" path="app.header.checked" equal="true" prop="activate">
+  <uni-store-set inactive type="session" path="app.header.mode" state="fixed"></uni-store-set>
+</uni-event-store-get>
+
+<uni-event-store-get type="session" path="app.header.checked" equal="unchecked" prop="activate">
+  <uni-store-set inactive type="session" path="app.header.mode" state="standard"></uni-store-set>
+</uni-event-store-get>
+
+<uni-event-store-get type="session" path="app.header.checked" equal="checked" prop="activate">
+  <uni-store-set inactive type="session" path="app.header.checked" state="unchecked"></uni-store-set>
+</uni-event-store-get>
+
+<uni-form-field class="d-flex">
+  <uni-store-get type="session" path="app.header.checked" equal="true" selector="uni-checkbox" prop="value"
+                 value="checked">
+    <uni-event-store-set listen="uniCheckboxChecked" type="session" path="app.header.checked" stop>
+      <uni-checkbox data-id="header-fixed"></uni-checkbox>
+    </uni-event-store-set>
+  </uni-store-get>
+
+  <label for="header-fixed">
+    <uni-translate>Header: 'fixed'</uni-translate>
+  </label>
+</uni-form-field>
+
+
+<uni-event-store-get type="session" path="app.aside.start.checked" equal="true" prop="activate">
+  <uni-store-set inactive type="session" path="app.aside.start.mode" state="modal"></uni-store-set>
+</uni-event-store-get>
+
+<uni-event-store-get type="session" path="app.aside.start.checked" equal="unchecked" prop="activate">
+  <uni-store-set inactive type="session" path="app.aside.start.mode" state="dismissible"></uni-store-set>
+</uni-event-store-get>
+
+<uni-event-store-get type="session" path="app.aside.start.checked" equal="checked" prop="activate">
+  <uni-store-set inactive type="session" path="app.aside.start.checked" state="unchecked"></uni-store-set>
+</uni-event-store-get>
+
+<uni-form-field class="d-flex">
+  <uni-store-get type="session" path="app.aside.start.checked" equal="true" selector="uni-checkbox" prop="value"
+                 value="checked">
+    <uni-event-store-set listen="uniCheckboxChecked" type="session" path="app.aside.start.checked" stop>
+      <uni-checkbox data-id="aside-modal"></uni-checkbox>
+    </uni-event-store-set>
+  </uni-store-get>
+
+  <label for="aside-modal">
+    <uni-translate>Aside: 'modal'</uni-translate>
+  </label>
+</uni-form-field>
+</body>
+</html>
