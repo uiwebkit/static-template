@@ -19,6 +19,11 @@
     --uni-size-xs: 12px;
 }
 
+/*hotfix for Firefox*/
+.mdc-tab-scroller__scroll-area--scroll {
+   overflow-x: hidden;
+}
+
 
 /*Used Bootstrap styles (may be removed)*/
 
