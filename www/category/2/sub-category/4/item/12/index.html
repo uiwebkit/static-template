@@ -10,11 +10,11 @@
 
   <link href="/assets/css/styles.css" rel="stylesheet" type="text/css"/>
 
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/icn@0.1.2/dist/icn/icn.esm.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/mat@0.2.1/dist/mat.esm.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/pro@0.4.0/dist/pro.esm.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/udk@0.2.4/dist/udk.esm.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/loc@0.2.2/dist/loc.esm.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/icn@1.0.0/dist/icn/icn.esm.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/mat@1.0.0/dist/mat.esm.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/pro@1.0.0/dist/pro.esm.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/udk@1.0.0/dist/udk.esm.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@uiwebkit/loc@1.0.0/dist/loc.esm.js"></script>
 
   <!-- Use to support Internet Explorer -->
   <script nomodule src="https://cdn.jsdelivr.net/npm/@uiwebkit/icn@latest/dist/icn/icn.js"></script>
@@ -31,9 +31,7 @@
 </uni-event>
 
 <template uni-render-part>
-  <uni-title value="Item 12"></uni-title>
-  <uni-scroll-to selector="uni-header"></uni-scroll-to>
-  <uni-store-set path="app.example.selection" state="null"></uni-store-set>
+  <uni-router-link activate params="tab=1"></uni-router-link>
 
   <div class="w-100">
     <uni-render-store path="app.templates.tabs.3"></uni-render-store>

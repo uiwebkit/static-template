@@ -7,6 +7,8 @@
 </head>
 <body>
 <uni-route path="/app/footer/" prop="activate" all>
+  <uni-scroll-to inactive selector="uni-header"></uni-scroll-to>
+
   <uni-store-set inactive path="app.breadcrumbs[0].path" state="null"></uni-store-set>
   <uni-store-set inactive path="app.breadcrumbs[1].name" state="null"></uni-store-set>
   <uni-store-set inactive path="app.breadcrumbs[1].path" state="null"></uni-store-set>
@@ -15,6 +17,7 @@
 </uni-route>
 
 <uni-route exact path="/app/footer/faq/" prop="activate" all>
+  <uni-title inactive value="Common Questions"></uni-title>
   <uni-store-set inactive path="app.breadcrumbs[0].name" state="Common Questions"></uni-store-set>
   <uni-store-set inactive type="session" path="app.content.link" state="/app/footer/faq/index.html"></uni-store-set>
   <uni-store-set inactive type="session" path="app.loc.languages" state="assets/json/i18n/faq/langs.json">
@@ -22,6 +25,7 @@
 </uni-route>
 
 <uni-route exact path="/app/footer/terms/" prop="activate" all>
+  <uni-title inactive value="Terms of Use"></uni-title>
   <uni-store-set inactive path="app.breadcrumbs[0].name" state="Terms of Use"></uni-store-set>
   <uni-store-set inactive type="session" path="app.content.link" state="/app/footer/terms/index.html"></uni-store-set>
   <uni-store-set inactive type="session" path="app.loc.languages" state="assets/json/i18n/terms/langs.json">
@@ -29,6 +33,7 @@
 </uni-route>
 
 <uni-route exact path="/app/footer/privacy/" prop="activate" all>
+  <uni-title inactive value="Privacy Policy"></uni-title>
   <uni-store-set inactive path="app.breadcrumbs[0].name" state="Privacy Policy"></uni-store-set>
   <uni-store-set inactive type="session" path="app.content.link" state="/app/footer/privacy/index.html"></uni-store-set>
   <uni-store-set inactive type="session" path="app.loc.languages" state="assets/json/i18n/privacy/langs.json">

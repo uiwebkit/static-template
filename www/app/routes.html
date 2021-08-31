@@ -7,6 +7,8 @@
 </head>
 <body>
 <uni-route exact path="/" prop="activate" all>
+  <uni-title inactive value="Home"></uni-title>
+  <uni-scroll-to inactive selector="uni-header"></uni-scroll-to>
   <uni-store-set inactive type="session" path="app.content.link" state="index.html"></uni-store-set>
 
   <uni-store-set inactive path="app.breadcrumbs[0].name" state="null"></uni-store-set>

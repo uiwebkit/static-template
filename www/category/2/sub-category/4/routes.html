@@ -7,6 +7,8 @@
 </head>
 <body>
 <uni-route exact path="/category/2/sub-category/4/" prop="activate" all>
+  <uni-title inactive value="Sub Category 4"></uni-title>
+
   <uni-store-set inactive path="app.breadcrumbs[2].name" state="null"></uni-store-set>
   <uni-store-set inactive path="app.breadcrumbs[2].path" state="null"></uni-store-set>
 
@@ -15,18 +17,21 @@
 </uni-route>
 
 <uni-route path="/category/2/sub-category/4/item/12" prop="activate" all>
+  <uni-title inactive value="Item 12"></uni-title>
   <uni-store-set inactive path="app.breadcrumbs[2].name" state="Item 12"></uni-store-set>
   <uni-store-set inactive type="session" path="app.content.link" state="category/2/sub-category/4/item/12/index.html">
   </uni-store-set>
 </uni-route>
 
 <uni-route path="/category/2/sub-category/4/item/13" prop="activate" all>
+  <uni-title inactive value="Item 13"></uni-title>
   <uni-store-set inactive path="app.breadcrumbs[2].name" state="Item 13"></uni-store-set>
   <uni-store-set inactive type="session" path="app.content.link" state="category/2/sub-category/4/item/13/index.html">
   </uni-store-set>
 </uni-route>
 
 <uni-route path="/category/2/sub-category/4/item/14" prop="activate" all>
+  <uni-title inactive value="Item 14"></uni-title>
   <uni-store-set inactive path="app.breadcrumbs[2].name" state="Item 14"></uni-store-set>
   <uni-store-set inactive type="session" path="app.content.link" state="category/2/sub-category/4/item/14/index.html">
   </uni-store-set>

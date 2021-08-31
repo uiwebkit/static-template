@@ -12,11 +12,12 @@
     --uni-color-success-on: #fff;
     --uni-color-accent-on: #fff;
     --uni-color-warn-on: #fff;
-    --uni-size: 24px;
-    --uni-size-lg: 48px;
-    --uni-size-md: 36px;
-    --uni-size-sm: 24px;
     --uni-size-xs: 12px;
+    --uni-size-sm: 16px;
+    --uni-size-md: 20px;
+    --uni-size-lg: 24px;
+    --uni-size-xl: 35px;
+    --uni-size-xxl: 50px;
 }
 
 /*hotfix for Firefox*/

@@ -7,11 +7,15 @@
 </head>
 <body>
 <uni-route path="/category/2/" prop="activate" all>
+  <uni-scroll-to inactive selector="uni-header"></uni-scroll-to>
+
   <uni-store-set inactive path="app.breadcrumbs[0].name" state="Category 2"></uni-store-set>
   <uni-store-set inactive path="app.breadcrumbs[0].path" state="/category/2/"></uni-store-set>
 </uni-route>
 
 <uni-route exact path="/category/2/" prop="activate" all>
+  <uni-title inactive value="Category 2"></uni-title>
+
   <uni-store-set inactive path="app.breadcrumbs[1].name" state="null"></uni-store-set>
   <uni-store-set inactive path="app.breadcrumbs[1].path" state="null"></uni-store-set>
   <uni-store-set inactive path="app.breadcrumbs[2].name" state="null"></uni-store-set>
@@ -21,6 +25,8 @@
 </uni-route>
 
 <uni-route path="/category/2/item/8/" prop="activate" all>
+  <uni-title inactive value="Item 8"></uni-title>
+
   <uni-store-set inactive path="app.breadcrumbs[1].name" state="Item 8"></uni-store-set>
   <uni-store-set inactive path="app.breadcrumbs[2].name" state="null"></uni-store-set>
   <uni-store-set inactive path="app.breadcrumbs[2].path" state="null"></uni-store-set>
